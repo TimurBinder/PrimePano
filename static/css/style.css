@@ -1,0 +1,191 @@
+:root {
+    --main-color: #F9F0EC;
+    --alternate-color: #CA9D75;
+}
+
+div, main, header, footer, figure, figcaption, 
+p, h1, h2, h3, h4, h5, h6, a, body, span, video, img {
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #181D24;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    border: 1px solid var(--alternate-color);
+    text-transform: uppercase;
+    transition-duration: 500ms;
+}
+
+.button:hover {
+    color: var(--main-color);
+    background-color: var(--alternate-color);
+    backdrop-filter: none;
+}
+
+header {
+    overflow-x: hidden;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 12px;
+}
+
+header .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+
+header .bg video {
+    width: auto;
+    height: 100%;
+}
+
+header .logo img {
+    width: 205px;
+}
+
+header .title {
+    margin-top: 38px;
+}
+
+header .title div:first-child {
+    width: 195px;
+    display: flex;
+    flex-direction: column;
+    animation: visible-on 6s ease-in;
+}
+
+header .title span {
+    font-family: "Kaisei Decol", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    display: block;
+    text-transform: uppercase;
+    line-height: 120%;
+}
+
+header .title div:last-child {
+    font-family: "Pinyon Script", serif;
+    font-size: 87px;
+    color: var(--alternate-color);
+    position: relative;
+    bottom: 37px;
+    left: 157px;
+    width: fit-content;
+}
+
+header .button {
+    width: 180px;
+    height: 40px;
+    border-radius: 40px;
+    font-size: 10px;
+    font-weight: 700;
+    margin: auto;
+    letter-spacing: 1.2px;
+    animation: visible-on 6s ease-in;
+}
+
+@keyframes visible-on {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 576px) {
+    header {
+        padding-top: 60px;
+    }
+
+    header .title {
+        margin-top: 82px;
+    }
+
+    header .title div:first-child {
+        width: 270px;
+    }
+
+    header .title span {
+        font-size: 70px;
+    }
+
+    header .title div:last-child {
+        font-size: 110px;
+        bottom: 57px;
+        left: 219px;
+    }
+
+    header .button {
+        margin: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    header .bg {
+        overflow-y: hidden;
+        width: 100vw;
+        height: 628px;
+    }
+
+    header .bg video {
+        overflow-y: hidden;
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        padding-top: 20px;
+    }
+
+    header .logo img {
+        width: 259px;
+    }
+
+    header .title {
+        margin-top: 82px;
+    }
+
+    header .title div:first-child {
+        width: 454px;
+    }
+
+    header .title span {
+        font-size: 120px;
+        line-height: 110%;
+    }
+    
+    header .title div:last-child {
+        font-size: 200px;
+        bottom: 91px;
+        left: 363px;
+    }
+
+    header .button {
+        font-size: 14px;
+        width: 223px;
+        height: 48px;
+    }
+}
