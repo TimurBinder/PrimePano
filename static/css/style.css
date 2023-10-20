@@ -7,6 +7,10 @@ html, body {
     scroll-behavior: smooth !important;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body.modal-open {
     overflow: hidden;
     height: 100vw;
@@ -184,6 +188,32 @@ input {
     width: 100%;
     border-radius: 25px;
     cursor: pointer;
+}
+
+.slide-modal .block {
+    padding: 40px;
+    padding-bottom: 20px;
+    background-color: #2A2E2D;
+    position: relative;
+}
+
+.slide-modal .slider .slides_block {
+    width: 100%;
+    position: relative;
+}
+
+.slide-modal .slider .slides_block img {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    transition-duration: 800ms;
+    margin: auto;
+}
+
+.slide-modal .slider .slides_block img.selected {
+    opacity: 1;
+    position: static;
 }
 
 .button {

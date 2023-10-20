@@ -186,44 +186,362 @@
             </div>
         </section>
 
-        <section class="plan mt-5">
+        <section class="plan styled-scrollbars mt-5">
             <div class="container zoom">
                 <div class="row">
-                    <div>
-                        <div class="menu col-md-4">
-                            <div class="head d-flex">
-                                <div class="item">Type A</div>
-                                <div class="item">Type B</div>
-                            </div>
-            
-                            <div class="body">
-                                <div class="item">
-                                    <div class="">
-                                        <p class="name">1 этаж</p>
+                    <div class="menu position-relative col-lg-4">
+                        <div class="head w-100 d-flex justify-content-between">
+                            <div name="typeA" class="item selected text-center w-50">Type A</div>
+                            <div name="typeB" class="item text-center w-50">Type B</div>
+                        </div>
+        
+                        <div id="typeA" class="body open">
+                            <div class="">
+                                <div class="item open">
+                                    <div class="name d-flex w-100 justify-content-between">
+                                        <p class="">1 этаж</p>
                                         <div class="chevron">
                                             <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M5.86328 6.32178C6.06836 6.31592 6.25586 6.23975 6.4082 6.07568L10.8613 1.51709C10.9902 1.38818 11.0605 1.22412 11.0605 1.03076C11.0605 0.644043 10.7559 0.333496 10.3691 0.333496C10.1816 0.333496 10 0.409668 9.86523 0.544434L5.86914 4.65186L1.86133 0.544434C1.72656 0.415527 1.55078 0.333496 1.35742 0.333496C0.970703 0.333496 0.666016 0.644043 0.666016 1.03076C0.666016 1.22412 0.736328 1.38818 0.865234 1.51709L5.32422 6.07568C5.48242 6.23975 5.6582 6.32178 5.86328 6.32178Z" fill="#CA9D75"/>
                                             </svg>
                                         </div>
-                                        <div class="list">
-                                            <div class="">
-                                                <img src="media/img/stylus.svg" alt="">
-                                                <p>Парковочное место</p>
-                                            </div>
+                                    </div>
+                                    <div class="list mt-3">
+                                        <div name="typeAslide" class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Паркоgвочное место</p>
+                                        </div>
+                                        <div name="typeBslide" class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="link">
-                                    Посмотреть планировку
+                                <div class="item">
+                                    <div class="name d-flex w-100 justify-content-between">
+                                        <p class="">1.5 этаж</p>
+                                        <div class="chevron">
+                                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.86328 6.32178C6.06836 6.31592 6.25586 6.23975 6.4082 6.07568L10.8613 1.51709C10.9902 1.38818 11.0605 1.22412 11.0605 1.03076C11.0605 0.644043 10.7559 0.333496 10.3691 0.333496C10.1816 0.333496 10 0.409668 9.86523 0.544434L5.86914 4.65186L1.86133 0.544434C1.72656 0.415527 1.55078 0.333496 1.35742 0.333496C0.970703 0.333496 0.666016 0.644043 0.666016 1.03076C0.666016 1.22412 0.736328 1.38818 0.865234 1.51709L5.32422 6.07568C5.48242 6.23975 5.6582 6.32178 5.86328 6.32178Z" fill="#CA9D75"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="list mt-3">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                            <input type="hidden">
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                    </div>
                                 </div>
+
+                                <div class="item">
+                                    <div class="name d-flex w-100 justify-content-between">
+                                        <p class="">2 этаж</p>
+                                        <div class="chevron">
+                                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.86328 6.32178C6.06836 6.31592 6.25586 6.23975 6.4082 6.07568L10.8613 1.51709C10.9902 1.38818 11.0605 1.22412 11.0605 1.03076C11.0605 0.644043 10.7559 0.333496 10.3691 0.333496C10.1816 0.333496 10 0.409668 9.86523 0.544434L5.86914 4.65186L1.86133 0.544434C1.72656 0.415527 1.55078 0.333496 1.35742 0.333496C0.970703 0.333496 0.666016 0.644043 0.666016 1.03076C0.666016 1.22412 0.736328 1.38818 0.865234 1.51709L5.32422 6.07568C5.48242 6.23975 5.6582 6.32178 5.86328 6.32178Z" fill="#CA9D75"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="list mt-3">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="name d-flex w-100 justify-content-between">
+                                        <p class="">3 этаж</p>
+                                        <div class="chevron">
+                                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.86328 6.32178C6.06836 6.31592 6.25586 6.23975 6.4082 6.07568L10.8613 1.51709C10.9902 1.38818 11.0605 1.22412 11.0605 1.03076C11.0605 0.644043 10.7559 0.333496 10.3691 0.333496C10.1816 0.333496 10 0.409668 9.86523 0.544434L5.86914 4.65186L1.86133 0.544434C1.72656 0.415527 1.55078 0.333496 1.35742 0.333496C0.970703 0.333496 0.666016 0.644043 0.666016 1.03076C0.666016 1.22412 0.736328 1.38818 0.865234 1.51709L5.32422 6.07568C5.48242 6.23975 5.6582 6.32178 5.86328 6.32178Z" fill="#CA9D75"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="list mt-3">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div href="#popup:slider" class="link">
+                                Посмотреть планировку
                             </div>
                         </div>
 
-                        <div class="slider col-md-8">
+                        <div id="typeB" class="body">
+                            <div class="">
+                                <div class="item">
+                                    <div class="name d-flex w-100 justify-content-between">
+                                        <p class="">1 этаж</p>
+                                        <div class="chevron">
+                                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.86328 6.32178C6.06836 6.31592 6.25586 6.23975 6.4082 6.07568L10.8613 1.51709C10.9902 1.38818 11.0605 1.22412 11.0605 1.03076C11.0605 0.644043 10.7559 0.333496 10.3691 0.333496C10.1816 0.333496 10 0.409668 9.86523 0.544434L5.86914 4.65186L1.86133 0.544434C1.72656 0.415527 1.55078 0.333496 1.35742 0.333496C0.970703 0.333496 0.666016 0.644043 0.666016 1.03076C0.666016 1.22412 0.736328 1.38818 0.865234 1.51709L5.32422 6.07568C5.48242 6.23975 5.6582 6.32178 5.86328 6.32178Z" fill="#CA9D75"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="list mt-3">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Паgрковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="name d-flex w-100 justify-content-between">
+                                        <p class="">1.5 этаж</p>
+                                        <div class="chevron">
+                                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.86328 6.32178C6.06836 6.31592 6.25586 6.23975 6.4082 6.07568L10.8613 1.51709C10.9902 1.38818 11.0605 1.22412 11.0605 1.03076C11.0605 0.644043 10.7559 0.333496 10.3691 0.333496C10.1816 0.333496 10 0.409668 9.86523 0.544434L5.86914 4.65186L1.86133 0.544434C1.72656 0.415527 1.55078 0.333496 1.35742 0.333496C0.970703 0.333496 0.666016 0.644043 0.666016 1.03076C0.666016 1.22412 0.736328 1.38818 0.865234 1.51709L5.32422 6.07568C5.48242 6.23975 5.6582 6.32178 5.86328 6.32178Z" fill="#CA9D75"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="list mt-3">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное местоs</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="name d-flex w-100 justify-content-between">
+                                        <p class="">2 этаж</p>
+                                        <div class="chevron">
+                                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.86328 6.32178C6.06836 6.31592 6.25586 6.23975 6.4082 6.07568L10.8613 1.51709C10.9902 1.38818 11.0605 1.22412 11.0605 1.03076C11.0605 0.644043 10.7559 0.333496 10.3691 0.333496C10.1816 0.333496 10 0.409668 9.86523 0.544434L5.86914 4.65186L1.86133 0.544434C1.72656 0.415527 1.55078 0.333496 1.35742 0.333496C0.970703 0.333496 0.666016 0.644043 0.666016 1.03076C0.666016 1.22412 0.736328 1.38818 0.865234 1.51709L5.32422 6.07568C5.48242 6.23975 5.6582 6.32178 5.86328 6.32178Z" fill="#CA9D75"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="list mt-3">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="name d-flex w-100 justify-content-between">
+                                        <p class="">3 этаж</p>
+                                        <div class="chevron">
+                                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.86328 6.32178C6.06836 6.31592 6.25586 6.23975 6.4082 6.07568L10.8613 1.51709C10.9902 1.38818 11.0605 1.22412 11.0605 1.03076C11.0605 0.644043 10.7559 0.333496 10.3691 0.333496C10.1816 0.333496 10 0.409668 9.86523 0.544434L5.86914 4.65186L1.86133 0.544434C1.72656 0.415527 1.55078 0.333496 1.35742 0.333496C0.970703 0.333496 0.666016 0.644043 0.666016 1.03076C0.666016 1.22412 0.736328 1.38818 0.865234 1.51709L5.32422 6.07568C5.48242 6.23975 5.6582 6.32178 5.86328 6.32178Z" fill="#CA9D75"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="list mt-3">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <img class="me-1" src="media/img/stylus.svg" alt="">
+                                            <p>Парковочное место</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div href="#popup:slider" class="link">
+                                Посмотреть планировку
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div name="typeAslide" class="slider open h-100 col-lg-8 position-relative">
+                        <div class="position-absolute z-5">
+                            <!-- Слайдер -->
                             <div class="slides">
                                 <div class="slide">
+                                    <img src="media/img/slider1/1.png" alt="">
+                                </div>
+                                <div class="slide">
+                                    <img src="media/img/slider1/1.png" alt="">
+                                </div>
+                                <div class="slide">
+                                    <img src="media/img/slider1/1.png" alt="">
+                                </div>
+                                <div class="slide">
+                                    <img src="media/img/slider1/1.png" alt="">
+                                </div>
+                                <div class="slide">
+                                    <img src="media/img/slider1/1.png" alt="">
+                                </div>
+                            </div>
+    
+                            <!-- Счетчик -->
+                            <div class="container ms-0">
+                                <div class="progress zoom col-lg-8 d-flex justify-content-lg-end justify-content-end align-self-end align-items-end mt-3">
+                                    <div class="arrow arrow-left me-3">
+                                        <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.505026 6.49498C0.231659 6.22161 0.231659 5.7784 0.505026 5.50503L4.9598 1.05025C5.23316 0.776888 5.67638 0.776887 5.94975 1.05025C6.22311 1.32362 6.22311 1.76684 5.94975 2.0402L1.98995 6L5.94975 9.9598C6.22311 10.2332 6.22311 10.6764 5.94975 10.9497C5.67638 11.2231 5.23317 11.2231 4.9598 10.9497L0.505026 6.49498ZM17 6.7L1 6.7L1 5.3L17 5.3L17 6.7Z" fill="#F5F2EB"/>
+                                        </svg></div>
+                                    <div class="score me-3">
+                                        <span class="current">1</span>/<span class="total">15</span>
+                                    </div>
+                                    <div class="arrow arrow-right">
+                                        <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.505026 6.49498C0.231659 6.22161 0.231659 5.7784 0.505026 5.50503L4.9598 1.05025C5.23316 0.776888 5.67638 0.776887 5.94975 1.05025C6.22311 1.32362 6.22311 1.76684 5.94975 2.0402L1.98995 6L5.94975 9.9598C6.22311 10.2332 6.22311 10.6764 5.94975 10.9497C5.67638 11.2231 5.23317 11.2231 4.9598 10.9497L0.505026 6.49498ZM17 6.7L1 6.7L1 5.3L17 5.3L17 6.7Z" fill="#F5F2EB"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div name="typeBslide" class="slider h-100 col-lg-8 position-relative">
+                        <div class="position-absolute z-5">
+                            <!-- Слайдер -->
+                            <div class="slides">
+                                <div class="slide">
+                                    <img src="media/img/slider1/1.png" alt="">
+                                </div>
+                                <div class="slide">
+                                    <img src="media/img/slider1/1.png" alt="">
+                                </div>
+                                <div class="slide">
+                                    <img src="media/img/slider1/1.png" alt="">
+                                </div>
+                                <div class="slide">
+                                    <img src="media/img/slider1/1.png" alt="">
+                                </div>
+                                <div class="slide">
+                                    <img src="media/img/slider1/1.png" alt="">
+                                </div>
+                                <div class="slide">
+                                    <img src="media/img/slider1/1.png" alt="">
+                                </div>
+                            </div>
+    
+                            <!-- Счетчик -->
+                            <div class="container ms-0">
+                                <div class="progress zoom col-lg-8 d-flex justify-content-lg-end justify-content-end align-self-end align-items-end mt-3">
+                                    <div class="arrow arrow-left me-3">
+                                        <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.505026 6.49498C0.231659 6.22161 0.231659 5.7784 0.505026 5.50503L4.9598 1.05025C5.23316 0.776888 5.67638 0.776887 5.94975 1.05025C6.22311 1.32362 6.22311 1.76684 5.94975 2.0402L1.98995 6L5.94975 9.9598C6.22311 10.2332 6.22311 10.6764 5.94975 10.9497C5.67638 11.2231 5.23317 11.2231 4.9598 10.9497L0.505026 6.49498ZM17 6.7L1 6.7L1 5.3L17 5.3L17 6.7Z" fill="#F5F2EB"/>
+                                        </svg></div>
+                                    <div class="score me-3">
+                                        <span class="current"></span>/<span class="total"></span>
+                                    </div>
+                                    <div class="arrow arrow-right">
+                                        <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.505026 6.49498C0.231659 6.22161 0.231659 5.7784 0.505026 5.50503L4.9598 1.05025C5.23316 0.776888 5.67638 0.776887 5.94975 1.05025C6.22311 1.32362 6.22311 1.76684 5.94975 2.0402L1.98995 6L5.94975 9.9598C6.22311 10.2332 6.22311 10.6764 5.94975 10.9497C5.67638 11.2231 5.23317 11.2231 4.9598 10.9497L0.505026 6.49498ZM17 6.7L1 6.7L1 5.3L17 5.3L17 6.7Z" fill="#F5F2EB"/>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -464,6 +782,55 @@
                 </svg>                    
             </div>
             <video data-src="media/video/PrimePanoPresentFull.mp4" controls></div>
+    </div>
+
+    <div class="modal slide-modal" id="slider">
+        <div class="bg"></div>
+        <div class="block zoom row">
+            <div class="cross">
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6.01172" y="7.4248" width="2" height="19" transform="rotate(-45 6.01172 7.4248)" fill="white"/>
+                    <rect x="19.4453" y="6.01074" width="2" height="19" transform="rotate(45 19.4453 6.01074)" fill="white"/>
+                </svg>
+            </div>
+
+            <!-- Слайдер -->
+            <div class="slider mt-4">
+                <div class="slides_block d-flex">
+                    
+                    <!-- Слайд -->
+                    <img class="selected" src="media/img/slider1/1.png" alt="">
+
+                    <!-- Слайд -->
+                    <img src="media/img/slider1/1.png" alt="">
+
+                    <!-- Слайд -->
+                    <img src="media/img/slider1/1.png" alt="">
+
+                    <!-- Слайд -->
+                    <img src="media/img/slider1/1.png" alt="">
+
+                    <!-- Слайд -->
+                    <img src="media/img/slider1/1.png" alt="">
+                </div>
+
+                <!-- Счетчик -->
+                <div class="progress z-5 position-relative zoom d-flex justify-content-md-end justify-content-end align-items-end mt-3">
+                    <div class="arrow arrow-left me-3">
+                        <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.505026 6.49498C0.231659 6.22161 0.231659 5.7784 0.505026 5.50503L4.9598 1.05025C5.23316 0.776888 5.67638 0.776887 5.94975 1.05025C6.22311 1.32362 6.22311 1.76684 5.94975 2.0402L1.98995 6L5.94975 9.9598C6.22311 10.2332 6.22311 10.6764 5.94975 10.9497C5.67638 11.2231 5.23317 11.2231 4.9598 10.9497L0.505026 6.49498ZM17 6.7L1 6.7L1 5.3L17 5.3L17 6.7Z" fill="#F5F2EB"/>
+                        </svg></div>
+                    <div class="score me-3">
+                        <span class="current"></span>/<span class="total"></span>
+                    </div>
+                    <div class="arrow arrow-right">
+                        <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.505026 6.49498C0.231659 6.22161 0.231659 5.7784 0.505026 5.50503L4.9598 1.05025C5.23316 0.776888 5.67638 0.776887 5.94975 1.05025C6.22311 1.32362 6.22311 1.76684 5.94975 2.0402L1.98995 6L5.94975 9.9598C6.22311 10.2332 6.22311 10.6764 5.94975 10.9497C5.67638 11.2231 5.23317 11.2231 4.9598 10.9497L0.505026 6.49498ZM17 6.7L1 6.7L1 5.3L17 5.3L17 6.7Z" fill="#F5F2EB"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="modal callback" id="form">
