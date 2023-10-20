@@ -6,12 +6,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/fonts.css">
     <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css//plan.css">
     <title>Prime Pano</title>
 </head>
 <body>
     <header class="zoom">
         <div class="bg">
-            <video src="media/video/PrimePanoPresent.mp4" muted autoplay loop></video>
+            <video muted autoplay loop>
+                <source src="media/video/PrimePanoPresentPart1.mp4" media="(min-width: 992px)">
+                <source src="media/video/PrimePanoPresentPart1Small.mp4" media="(min-width: 576px)">
+                <source src="media/video/PrimePanoPresentPart1ExtraSmall.mp4" media="(max-width: 575px)">
+            </video>
         </div>
         <div class="container position-relative">
             <div class="row d-flex justify-content-between">
@@ -33,43 +38,464 @@
                 </div>
 
                 <div class="col-lg-3 col-sm-5 d-flex justify-content-sm-end justify-content-center order-sm-1">
-                    <a href="#" class="button">Связаться с нами</a>
+                    <a href="#popup:form" class="button">Связаться с нами</a>
                 </div>
 
                 <div class="billet d-md-flex d-none position-absolute">
                     <img class="col-2" src="media/img/premiumVillas.png" alt="Премиальные виллы">
                     <div class="col-9">
                         <h5>Премиальные виллы</h5>
-                        <p>от 39,900,90 ТНВ</p>
+                        <p>от 39,900,00 ТНВ</p>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-
     <main>
-        <section class="premium-villas">
-            <div class="container">
-                <div class="row">
+        <section class="premium-villas mt-5">
+            <div class="container zoom">
+                <div class="row d-flex align-items-center">
                     <div class="col-md-6">
                         <div class="video">
-                            <video src=""></video>
-                        </div>
-                        <a href="" class="">
-                            <img src="" alt="">
-                            <p>Местоположение</p>
+                            <video autoplay loop muted>
+                                <source src="media/video/PrimePanoPresentPart2.mp4" type="video/mp4" media="(min-width: 992px)">
+                                <source src="media/video/PrimePanoPresentPart2Small.mp4" type="video/mp4" media="(max-width: 991px)">
+                            </video>
+                            <div class="play">
+                                <div href="#popup:modal-premium-village" class="icon">
+                                    <img src="media/img/play.svg" alt="">
+                                    <p>Смотреть видео</p>
+                                </div>
+                            </div>
+                        </div> 
+                        <a class="location mt-3 d-flex justify-content-center" href="https://www.google.com/maps/place/Prime+pano/@7.9859875,98.3004868,16.09z/data=!4m6!3m5!1s0x30503932c1c013e7:0x352cd694b04d48d!8m2!3d7.9855387!4d98.3027831!16s%2Fg%2F11vbcmf7hx?entry=ttu">
+                            <img class="me-2" src="media/img/location.svg" alt="">
+                            <p >Местоположение</p>
                         </a>
                     </div>
-                    <div class="col-md-6"></div>
+                    <div class="col-md-6 col-sm-12 col-11 ms-md-0 me-md-0 ms-auto me-auto mt-md-0 mt-5">
+                        <div class="ms-xl-5">
+                            <div class="">
+                                <h2>
+                                    Премиальные семейные <br>виллы с богатой<br> инфраструктурой <span>в 5 минутах</span><br> от пляжа БангТао
+                                </h2>
+                            </div>
+                            
+                            <div class="list mt-3">
+                                <p class="">Виллы от 350 до 400 м2</p>
+                                <p class=" mt-2">Закрытая территория</p>
+                                <p class=" mt-2">Панорамный вид на горы</p>
+                                <p class=" mt-2">Установленные лифты в домах</p>
+                            </div>
+    
+                            <div class="billet mt-3">
+                                <div class="bg"></div>
+                                <figure class="position-relative pt-2">
+                                    <p>Виза Thai Elite на 10 лет в подарок при покупке</p>
+                                    <figcaption><a href="#popup:form">Узнать подробнее</a></figcaption>
+                                </figure>
+                                <img src="media/img/pngwing1.png" alt="" class="wing">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info row">
+                     <div class="col-md-8 col-sm-12 col-11 ms-md-0 me-md-0 ms-auto me-auto mt-md-0 ">
+                        <div class="d-flex flex-column">
+                            <img src="media/img/logoCut.png" alt="Логотип">
+                            <div class="offer mt-4">
+                                <h5>Любовь с первого взгляда</h5>
+                                <p class="mt-1">
+                                    Премиальные виллы с панорамным видом на горы дают возможность погрузиться в атмосферу роскоши и великолепия, наслаждаться захватывающими видами горных пейзажей, находясь в уединении с природой.
+                                </p>
+                                <p class="mt-1">
+                                    Каждая вилла разработана с учетом высочайших стандартов для жизни. Просторные интерьеры, современные удобства и стильный дизайн создают атмосферу уюта и комфорта. Несмотря на окружение природы, вы всегда находитесь близко к городской инфраструктуре. 
+                                </p>
+                            </div>
+                        </div>
+                     </div>
+
+                     <div class="price col-md-4 col-sm-12 col-11 ms-md-0 me-md-0 ms-auto me-auto mt-md-0 mt-5 d-flex flex-column align-items-md-end">
+                        <figure>
+                            <figcaption>Стоимость от:</figcaption>
+                            <p>39,900,00 ТНВ</p>
+                        </figure>
+                        <a href="#popup:form" class="button mt-3">Прайс-лист</a>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="achievements mt-5">
+            <div class="container zoom">
+                
+                <div class="row d-md-flex justify-content-md-end circles">
+                    <h2 class="col-lg-6 col-md-6 order-md-2">
+                        В <span>Prime Pano<br> Villas</span><br> Есть всё для того,<br> чтобы наслаждаться любовью к себе и своим близким
+                    </h2>
+
+                    <div class="col-md-4 order-md-1 mt-3 position-absolute">
+    
+                        <!-- Круг -->
+                        <div class="circle" id="circle-1">
+                            <div class="offer">
+                                <h4>Более <span>12</span></h4>
+                                <p>завершенных объектов недвижимости</p>
+                            </div>
+                        </div>
+    
+                        <!-- Круг -->
+                        <div class="circle" id="circle-2">
+                            <div class="offer">
+                                <h4>от <span>350</span> до <span>470</span></h4>
+                                <p>метров площадь вилл</p>
+                            </div>
+                        </div>
+    
+                        <!-- Круг -->
+                        <div class="circle" id="circle-3">
+                            <div class="offer">
+                                <h4>декабрь <span>2024</span></h4>
+                                <p>завершение строительства</p>
+                            </div>
+                        </div>
+    
+                        <!-- Круг -->
+                        <div class="circle" id="circle-4">
+                            <div class="offer">
+                                <h4>на <span>10%</span></h4>
+                                <p>растет стоимость виллы ежегодно</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row d-md-flex justify-content-md-end">
+                    <div class="col-md-7">
+                        <a href="#" class="button">Скачать каталог Prime Pano</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="ticket mt-5">
+                <p class="zoom">
+                    Виза Thai Elite на 10 лет в подарок
+                </p>
+            </div>
+        </section>
+
+        <section class="plan mt-5">
+            <div class="container zoom">
+                <div class="row">
+                    <div>
+                        <div class="menu col-md-4">
+                            <div class="head d-flex">
+                                <div class="item">Type A</div>
+                                <div class="item">Type B</div>
+                            </div>
+            
+                            <div class="body">
+                                <div class="item">
+                                    <div class="">
+                                        <p class="name">1 этаж</p>
+                                        <div class="chevron">
+                                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.86328 6.32178C6.06836 6.31592 6.25586 6.23975 6.4082 6.07568L10.8613 1.51709C10.9902 1.38818 11.0605 1.22412 11.0605 1.03076C11.0605 0.644043 10.7559 0.333496 10.3691 0.333496C10.1816 0.333496 10 0.409668 9.86523 0.544434L5.86914 4.65186L1.86133 0.544434C1.72656 0.415527 1.55078 0.333496 1.35742 0.333496C0.970703 0.333496 0.666016 0.644043 0.666016 1.03076C0.666016 1.22412 0.736328 1.38818 0.865234 1.51709L5.32422 6.07568C5.48242 6.23975 5.6582 6.32178 5.86328 6.32178Z" fill="#CA9D75"/>
+                                            </svg>
+                                        </div>
+                                        <div class="list">
+                                            <div class="">
+                                                <img src="media/img/stylus.svg" alt="">
+                                                <p>Парковочное место</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="link">
+                                    Посмотреть планировку
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider col-md-8">
+                            <div class="slides">
+                                <div class="slide">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="infrastructure mt-5">
+            <div class="container zoom">
+                <div class="row">
+                    <h2>В <span>Prime Pano Villas</span> есть всё для того, чтобы наслаждаться жизнью</h2>
+                </div>
+            </div>
+
+            <!-- Слайдер -->
+            <div class="slider mt-md-5 mt-4">
+                <div class="slides">
+                    <!-- Слайд -->
+                    <div class="slide d-md-flex">
+                        <div class="offer order-md-2 zoom">
+                            <div class="num">
+                                1
+                                <img src="media/img/num.svg" alt="">
+                            </div>
+                            <h3 class="mt-3"><span>Уникальная</span> инфраструктура</h3>
+                            <p class="mt-3">
+                                У нас есть все, чтобы сделать ваше пребывание незабываемым. Начиная с роскошных вилл, оформленных с изыском и комфортом, и заканчивая разнообразными удобствами.
+                            </p>
+                            <p class="mt-2">
+                                Наша цель - сделать каждый момент вашего пребывания уникальным, запоминающимся и особенным в месте, которому нет аналогов.
+                            </p>
+                        </div>
+    
+                        <div class="image mt-3 me-md-3 order-md-1">
+                            <img src="media/img/slider2/1.png" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Слайд -->
+                    <div class="slide d-md-flex">
+                    <div class="offer order-md-2 zoom">
+                        <div class="num">
+                            2
+                            <img src="media/img/num.svg" alt="">
+                        </div>
+                        <h3 class="mt-3"><span>Уникальная</span> инфраструктура</h3>
+                        <p class="mt-3">
+                            У нас есть все, чтобы сделать ваше пребывание незабываемым. Начиная с роскошных вилл, оформленных с изыском и комфортом, и заканчивая разнообразными удобствами.
+                        </p>
+                        <p class="mt-2">
+                            Наша цель - сделать каждый момент вашего пребывания уникальным, запоминающимся и особенным в месте, которому нет аналогов.
+                        </p>
+                    </div>
+
+                    <div class="image mt-3 me-md-3 order-md-1">
+                        <img src="media/img/slider2/1.png" alt="">
+                    </div>
+                    </div>
+
+                    <!-- Слайд -->
+                    <div class="slide d-md-flex">
+                        <div class="offer order-md-2 zoom">
+                            <div class="num">
+                                3
+                                <img src="media/img/num.svg" alt="">
+                            </div>
+                            <h3 class="mt-3"><span>Уникальная</span> инфраструктура</h3>
+                            <p class="mt-3">
+                                У нас есть все, чтобы сделать ваше пребывание незабываемым. Начиная с роскошных вилл, оформленных с изыском и комфортом, и заканчивая разнообразными удобствами.
+                            </p>
+                            <p class="mt-2">
+                                Наша цель - сделать каждый момент вашего пребывания уникальным, запоминающимся и особенным в месте, которому нет аналогов.
+                            </p>
+                        </div>
+    
+                        <div class="image mt-3 me-md-3 order-md-1">
+                            <img src="media/img/slider2/1.png" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Слайд -->
+                    <div class="slide d-md-flex">
+                        <div class="offer order-md-2 zoom">
+                            <div class="num">
+                                4
+                                <img src="media/img/num.svg" alt="">
+                            </div>
+                            <h3 class="mt-3"><span>Уникальная</span> инфраструктура</h3>
+                            <p class="mt-3">
+                                У нас есть все, чтобы сделать ваше пребывание незабываемым. Начиная с роскошных вилл, оформленных с изыском и комфортом, и заканчивая разнообразными удобствами.
+                            </p>
+                            <p class="mt-2">
+                                Наша цель - сделать каждый момент вашего пребывания уникальным, запоминающимся и особенным в месте, которому нет аналогов.
+                            </p>
+                        </div>
+    
+                        <div class="image mt-3 me-md-3 order-md-1">
+                            <img src="media/img/slider2/1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Счетчик -->
+                <div class="progress zoom d-flex justify-content-md-center justify-content-end align-items-end mt-3">
+                    <div class="arrow arrow-left me-3">
+                        <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.505026 6.49498C0.231659 6.22161 0.231659 5.7784 0.505026 5.50503L4.9598 1.05025C5.23316 0.776888 5.67638 0.776887 5.94975 1.05025C6.22311 1.32362 6.22311 1.76684 5.94975 2.0402L1.98995 6L5.94975 9.9598C6.22311 10.2332 6.22311 10.6764 5.94975 10.9497C5.67638 11.2231 5.23317 11.2231 4.9598 10.9497L0.505026 6.49498ZM17 6.7L1 6.7L1 5.3L17 5.3L17 6.7Z" fill="#F5F2EB"/>
+                        </svg></div>
+                    <div class="score me-3">
+                        <span class="current">1</span>/<span class="total">15</span>
+                    </div>
+                    <div class="arrow arrow-right">
+                        <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.505026 6.49498C0.231659 6.22161 0.231659 5.7784 0.505026 5.50503L4.9598 1.05025C5.23316 0.776888 5.67638 0.776887 5.94975 1.05025C6.22311 1.32362 6.22311 1.76684 5.94975 2.0402L1.98995 6L5.94975 9.9598C6.22311 10.2332 6.22311 10.6764 5.94975 10.9497C5.67638 11.2231 5.23317 11.2231 4.9598 10.9497L0.505026 6.49498ZM17 6.7L1 6.7L1 5.3L17 5.3L17 6.7Z" fill="#F5F2EB"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dates mt-5">
+            <img src="media/img/pngwing2.png" alt="" class="wing">
+            <div class="container zoom">
+                <div class="row me-0 ms-0">
+                    <h2 class="col-lg-4">
+                        Phuket Plus – <span class="d-lg-block w-lg-100">Более 17 лет в</span> строительстве
+                    </h2>
+
+                    <div class="col-lg-4 mt-lg-0 mt-3">
+                        <div class="item">
+                            <p>2008</p>
+                            <p>The Tree residence – Complete</p>
+                        </div>
+
+                        <div class="item">
+                            <p>2010</p>
+                            <p>Zeb Space – Complete</p>
+                        </div>
+
+                        <div class="item">
+                            <p>2011</p>
+                            <p>Be My Guest – Complete</p>
+                        </div>
+                        
+                        <div class="item">
+                            <p>2013</p>
+                            <p>Icon Park – Complete</p>
+                        </div>
+
+                        <div class="item">
+                            <p>2011</p>
+                            <p>Kamala Resort&Spa – Complete</p>
+                        </div>
+
+                        <div class="item">
+                            <p>2011</p>
+                            <p>Norn Talay Phuket – Complete</p>
+                        </div>
+
+                        <div class="item">
+                            <p>2011</p>
+                            <p>Lake Town – Complete</p>
+                        </div>
+
+                        <div class="item">
+                            <p>2011</p>
+                            <p>Oceana Condominimum – Complete</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-lg-4">
+                        <div class="item">
+                            <p>2018</p>
+                            <p>Oceana Resort – Complete</p>
+                        </div>
+                        
+                        <div class="item">
+                            <p>2019</p>
+                            <p>Palmyrah Surin – Complete</p>
+                        </div>
+
+                        <div class="item">
+                            <p>2019</p>
+                            <p>Ocean Town Kata – Complete</p>
+                        </div>
+
+                        <div class="item">
+                            <p>2020</p>
+                            <p>Norn Nimman 13 – Complete</p>
+                        </div>
+
+                        <div class="item">
+                            <p>2023</p>
+                            <p>Phana Srisoonthorn – Under const.</p>
+                        </div>
+
+                        <div class="item">
+                            <p>2023</p>
+                            <p>Phana Thep Krasattri – Under const.</p>
+                        </div>
+
+                        <div class="item">
+                            <p>2023</p>
+                            <p>KAYADEE Wellness – Permission</p>
+                        </div>
+
+                        <div class="item select">
+                            <p>2023</p>
+                            <p>Prime Pano – Now</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-
+        <div class="container zoom">
+            <h2 class="row me-0 ms-0">
+                Остались вопросы? <br>
+                <span class="d-block w-100">Напишите нам</span>
+            </h2>
+            <div class="row me-0 ms-0 mt-4">
+                <a href="#popup:form" class="button">Задать вопрос менеджеру</a>
+            </div>
+        </div>
     </footer>
+
+    <div class="modal video" id="modal-premium-village">
+        <div class="bg"></div>
+        <div class="block zoom">
+            <div class="cross">
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6.01172" y="7.4248" width="2" height="19" transform="rotate(-45 6.01172 7.4248)" fill="white"/>
+                    <rect x="19.4453" y="6.01074" width="2" height="19" transform="rotate(45 19.4453 6.01074)" fill="white"/>
+                </svg>                    
+            </div>
+            <video data-src="media/video/PrimePanoPresentFull.mp4" controls></div>
+    </div>
+
+    <div class="modal callback" id="form">
+        <div class="bg"></div>
+        <div class="block zoom row">
+            <div class="cross">
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6.01172" y="7.4248" width="2" height="19" transform="rotate(-45 6.01172 7.4248)" fill="white"/>
+                    <rect x="19.4453" y="6.01074" width="2" height="19" transform="rotate(45 19.4453 6.01074)" fill="white"/>
+                </svg>
+            </div>
+            <div class="left col-5 d-md-block d-none">
+                <img width="100%" src="media/img/modal.png" alt="">
+            </div>
+            <div class="col-md-7 right">
+
+                <img src="media/img/Prime.svg" alt="Логотип" class="logo">
+                <p class="desc">Оставьте заявку и наш менеджер свяжется<br> с вами в ближайшее время.</p>
+                <form action="POST">
+                    <div class="d-flex flex-md-row flex-column justify-content-between mt-md-4 mt-3">
+                        <input type="text" name="name" placeholder="Имя">
+                        <input class="mt-md-0 mt-2" type="tel" name="phone" placeholder="Номер телефона">
+                    </div>
+                    <button class="button mt-4" type="submit">Отправить запрос</button>
+                </form>
+                <div class="caption mt-md-5 mt-3">
+                    <p>Больше премиальной недвижимости</p>
+                    <a href="https://www.google.com/">https://www.google.com/</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="static/js/script.js"></script>
