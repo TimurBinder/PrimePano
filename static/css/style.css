@@ -293,8 +293,8 @@ header .title div:last-child {
     font-size: 87px;
     color: var(--alternate-color);
     position: relative;
-    bottom: 37px;
-    left: 157px;
+    bottom: 56px;
+    left: 47px;
     width: fit-content;
 }
 
@@ -809,8 +809,8 @@ footer .button {
 
     header .title div:last-child {
         font-size: 110px;
-        bottom: 57px;
-        left: 219px;
+        bottom: 70px;
+        left: 85px;
     }
 
     header .button {
@@ -829,7 +829,8 @@ footer .button {
     .achievements .circle,
     .achievements h2,
     .achievements .button,
-    .infrastructure, .dates
+    .infrastructure, .dates,
+    .plan
     {
         opacity: 0;
         transition-duration: 1400ms;
@@ -980,8 +981,8 @@ footer .button {
     
     header .title div:last-child {
         font-size: 200px;
-        bottom: 91px;
-        left: 363px;
+        bottom: 105px;
+        left: 181px;
     }
 
     header .button {
