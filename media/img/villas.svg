@@ -47,7 +47,7 @@
     stroke-dashoffset:1000;
     stroke-opacity:1;
     stroke-width:0.264583;
-    transition:7s linear;
+    transition:4s linear;
 }
 ]]></style>
 <clipPath
@@ -75,6 +75,6 @@
          transform="matrix(3.7795276,0,0,3.7795276,-183.67945,-36.863179)"
          clip-path="url(#clipPath5)" /></g></g>
                   <script>
-  setTimeout(()=>document.querySelector('#path2').style.strokeDashoffset = "0", 2000);
+  setTimeout(()=>document.querySelector('#path2').style.strokeDashoffset = "0", 3000);
 </script></svg>
 

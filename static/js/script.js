@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const slides = slidesBlock.querySelectorAll('.slide');
         
         let currentIndex = 0;
-        let slideWidth = parseInt(window.getComputedStyle(slides[0]).width) + parseInt(window.getComputedStyle(slides[0]).marginRight.split('px')[0]) + parseInt(window.getComputedStyle(slides[0]).marginLeft.split('px')[0]);
+        let slideWidth = parseInt(window.getComputedStyle(slides[0]).width) + parseInt(window.getComputedStyle(slides[0]).marginRight.split('px')[0]) + parseInt(window.getComputedStyle(slides[0]).marginLeft.split('px')[0]) + 1;
         console.log(slideWidth);
         current.innerHTML = currentIndex + 1;
         total.innerHTML = slides.length;
@@ -248,28 +248,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Появление элементов
+    try {
+        const section = document.querySelector('header');
+
+        onScrolledTo(section, function() {
+            setTimeout(() => {
+                section.querySelector('.title').classList.add('vis');
+            }, 2000);
+        });
+    } catch(e) {
+        console.error(e)
+    }
+
     // Премиум виллы
     try {
         const section = document.querySelector('.premium-villas');
 
-        onScrolledTo(section.querySelector('.info'), function() {
+        onScrolledTo(section.querySelector('.billet'), function() {
             setTimeout(() => {
                 section.querySelector('.video').style.opacity = 1;
                 section.querySelector('.location').style.opacity = 1;
-            }, 200);
+            }, 100);
 
             setTimeout(() => {
                 section.querySelector('h2').style.opacity = 1;
                 section.querySelectorAll('.list p').forEach((item, index) => {
                     setTimeout(() => {
                         item.style.opacity = 1;
-                    }, (500 * (index + 1)));
+                    }, (400 * (index + 1)));
                 });
-            }, 1000);
+            }, 600);
 
             setTimeout(() => {
-                section.querySelector('.billet').style.opacity = 1;
-            }, 3000);
+                section.querySelector('.billet .bg').style.transform = "scaleY(1)";
+                setTimeout(() => {
+                    section.querySelector('.billet figure').style.opacity = "1";
+                    section.querySelector('.billet img').style.opacity = "1";
+                }, 1000)
+            }, 2500);
         });
     } catch(e) {
         console.error(e)
@@ -282,40 +298,46 @@ document.addEventListener('DOMContentLoaded', () => {
         onScrolledTo(document.querySelector('.achievements'), function() {
             setTimeout(() => {
                 section.querySelector('img').style.opacity = 1;
-            }, 300);
+            }, 100);
 
             setTimeout(() => {
                 section.querySelector('.offer').style.opacity = 1;
-            }, 1000);
+            }, 600);
 
             setTimeout(() => {
                 section.querySelector('.price').style.opacity = 1;
-            }, 1700);
+            }, 1000);
+
+            const achievements = document.querySelector('.achievements');
+
+            setTimeout(() => {
+                achievements.querySelectorAll('.circle').forEach((circle, index) => {
+                    setTimeout(() => {
+                        circle.style.opacity = 1;
+                    }, 300 * index)
+                });
+            }, 1200);
+
+            setTimeout(() => {
+                achievements.querySelector('h2').style.opacity = 1;
+            }, 1800);
+
+            setTimeout(() => {
+                achievements.querySelector('.button').style.opacity = 1;
+            }, 2400);
         });
     } catch(e) {
         console.error(e)
     }
 
-    // Достижения
+    // Планировка
     try {
-        const section = document.querySelector('.achievements');
+        const section = document.querySelector('.plan');
 
-        onScrolledTo(document.querySelector('.achievements .ticket'), function() {
+        onScrolledTo(section.querySelector('.menu'), function() {
             setTimeout(() => {
-                section.querySelectorAll('.circle').forEach((circle, index) => {
-                    setTimeout(() => {
-                        circle.style.opacity = 1;
-                    }, 500 * index)
-                });
-            }, 100);
-
-            setTimeout(() => {
-                section.querySelector('h2').style.opacity = 1;
-            }, 2000);
-
-            setTimeout(() => {
-                section.querySelector('.button').style.opacity = 1;
-            }, 2700);
+                section.style.opacity = 1;
+            }, 200);
         });
     } catch(e) {
         console.error(e)
@@ -325,10 +347,10 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
         const section = document.querySelector('.infrastructure');
 
-        onScrolledTo(section.querySelector('.arrow'), function() {
+        onScrolledTo(section.querySelector('.offer'), function() {
             setTimeout(() => {
                 section.style.opacity = 1;
-            }, 500);
+            }, 200);
         });
     } catch(e) {
         console.error(e)
@@ -338,10 +360,10 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
         const section = document.querySelector('.dates');
 
-        onScrolledTo(document.querySelector('footer'), function() {
+        onScrolledTo(section.querySelector('.item'), function() {
             setTimeout(() => {
                 section.style.opacity = 1;
-            }, 500);
+            }, 200);
         });
     } catch(e) {
         console.error(e)
