@@ -191,13 +191,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (touchCondition) {
                 slides[currentIndex].style.transitionDuration = `500ms`;
                 touchCondition = false;
+                setTimeout(() => {
+                    slides.forEach(slide => {
+                        slide.style.transform = `translateX(0px)`;
+                    });
+                }, 500);
+            } else {
+                slides[currentIndex].style.transform = `translateX(0px)`;
             }
 
-            setTimeout(() => {
-                slides.forEach(slide => {
-                    slide.style.transform = `translateX(0px)`;
-                });
-            }, 500);
         }
 
         slider.addEventListener('touchstart', startTouch, event);
@@ -275,6 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
         function taskUpdate() {
           if (normOffset() > 0) {
+            console.log(el);
             window.removeEventListener('resize', onUpdate);
             window.removeEventListener('scroll', onUpdate);
             callback();
@@ -306,8 +309,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Премиум виллы
     try {
         const section = document.querySelector('.premium-villas');
+        let selector;
+        if (window.innerWidth > 992)
+            selector = ".info";
+        else 
+            selector = '.location';
 
-        onScrolledTo(section.querySelector('.billet'), function() {
+        console.log(selector);
+        onScrolledTo(section.querySelector(selector), function() {
             setTimeout(() => {
                 section.querySelector('.video').style.opacity = 1;
                 section.querySelector('.location').style.opacity = 1;
@@ -377,7 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
         const section = document.querySelector('.plan');
 
-        onScrolledTo(section.querySelector('.menu'), function() {
+        onScrolledTo(section.querySelector('.link'), function() {
             setTimeout(() => {
                 section.style.opacity = 1;
             }, 200);
