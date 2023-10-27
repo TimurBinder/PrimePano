@@ -1,13 +1,3 @@
-// try {
-//     document.addEventListener('wheel', (e) => {
-//         var nt = $(document.body).scrollTop()-(e.deltaY*e.deltaFactor*100);
-//         e.preventDefault(); 
-//         e.stopPropagation(); 
-//     });
-// } catch(e) {
-//     console.error(e);
-// }
-
 // Зум
 try {
     document.addEventListener('DOMContentLoaded', () => {
@@ -17,6 +7,8 @@ try {
             }
             else if (window.innerWidth >= 1280) {
                 item.style.zoom = window.innerWidth / 1280;
+            } else {
+                item.style.zoom = 1;
             }
         });
     });
@@ -27,6 +19,8 @@ try {
             }
             else if (window.innerWidth >= 1280) {
                 item.style.zoom = window.innerWidth / 1280;
+            } else {
+                item.style.zoom = 1;
             }
         });
     });
@@ -141,21 +135,74 @@ document.addEventListener('DOMContentLoaded', () => {
         
         slidesBlock.style.width = slideWidth * slides.length + 'px';
 
-        nextBtn.addEventListener('click', () => {
+        function switchNextSlide() {
             if (currentIndex < slides.length - 1)
-                currentIndex++;
-            
+            currentIndex++;
+        
             slidesBlock.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
             current.innerHTML = currentIndex + 1;
-        });
+        }
 
-        prevBtn.addEventListener('click', () => {
+        function switchPrevSlide() {
             if (currentIndex > 0)
-                currentIndex--;
-            
+            currentIndex--;
+        
             slidesBlock.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
             current.innerHTML = currentIndex + 1;
-        });
+        }
+
+        nextBtn.addEventListener('click', switchNextSlide);
+
+        prevBtn.addEventListener('click', switchPrevSlide);
+
+        let firstTouch;
+        let touchCondition = false;
+
+        function startTouch(e) {
+            firstTouch = e.touches[0];
+            touchCondition = true;
+            slides[currentIndex].style.transitionDuration = "0ms";
+        }
+
+        function moveTouch(e) {
+            if (touchCondition == false)
+                return;
+
+            if (e.touches[0].clientX - firstTouch.clientX < -100) {
+                switchNextSlide();
+                touchCondition = false;
+                return;
+            }
+            else if (e.touches[0].clientX - firstTouch.clientX > 100) {
+                switchPrevSlide();
+                touchCondition = false;
+                return;
+            }
+
+            let transform = e.touches[0].clientX - firstTouch.clientX;
+            if (currentIndex == 0 && transform > 0 
+                || currentIndex >= slides.length - 1 && transform < 0)
+                transform = 0;
+
+            slides[currentIndex].style.transform = `translateX(${transform}px)`;
+        }
+
+        function endTouch(e) {
+            if (touchCondition) {
+                slides[currentIndex].style.transitionDuration = `500ms`;
+                touchCondition = false;
+            }
+
+            setTimeout(() => {
+                slides.forEach(slide => {
+                    slide.style.transform = `translateX(0px)`;
+                });
+            }, 500);
+        }
+
+        slider.addEventListener('touchstart', startTouch, event);
+        slider.addEventListener('touchmove', moveTouch, event);
+        document.addEventListener('touchend', endTouch, event);
 
         slider.setAttribute('work', true);
     }
@@ -183,7 +230,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 btn.classList.add('selected');
-                menu.querySelector(`#${btn.getAttribute('name')}`).classList.add('open')
+                menu.querySelector(`#${btn.getAttribute('name')}`).classList.add('open');
+
+                if (btn.hasAttribute('name')) {
+                    document.querySelector('section.plan .slider.open').classList.remove('open');
+                    document.querySelector(`section.plan .slider[name="${btn.getAttribute('name')}"]`).classList.add('open');
+                    createSlider(document.querySelector(`section.plan .slider[name="${btn.getAttribute('name')}"]`));
+                }
             });
         });
 
@@ -201,16 +254,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         item.classList.remove('open');
                     }
                 }
-            });
-
-            item.querySelectorAll('div').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    if (btn.hasAttribute('name')) {
-                        document.querySelector('section.plan .slider.open').classList.remove('open');
-                        document.querySelector(`section.plan .slider[name="${btn.getAttribute('name')}"]`).classList.add('open');
-                        createSlider(document.querySelector(`section.plan .slider[name="${btn.getAttribute('name')}"]`));
-                    }
-                });
             });
         });
     } catch(e) {

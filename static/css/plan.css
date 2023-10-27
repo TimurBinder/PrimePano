@@ -58,6 +58,7 @@
     max-height: 550px;
     transition-duration: 1s;
     overflow: hidden;
+    margin-right: 4px;
 }
 
 .plan .body .item .chevron {
@@ -77,7 +78,6 @@
 
 .plan .body .item .list div {
     padding-bottom: 12px;
-    cursor: pointer;
 }
 
 .plan .body .link {
@@ -170,7 +170,7 @@
     }
 
     .plan .body .item.open .list {
-        max-height: 200px;
+        max-height: 165px;
         overflow: scroll;
         -webkit-mask-image:-webkit-linear-gradient(90deg, rgba(0,0,0,0) 1%, rgba(0,0,0,1) 40%);
         mask-image: linear-gradient(90deg, rgba(0,0,0,0) 1%, rgba(0,0,0,1) 40%);

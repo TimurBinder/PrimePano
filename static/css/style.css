@@ -140,7 +140,7 @@ input {
 }
 
 .modal .block {
-    width: 50%;
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -302,6 +302,12 @@ header .title {
     margin-top: 38px;
 }
 
+header .title h1 {
+    width: fit-content;
+    margin-right: 153px;
+
+}
+
 header .title div:first-child {
     width: 195px;
     display: flex;
@@ -324,13 +330,10 @@ header .title span {
 }
 
 header .title div:last-child {
-    font-family: "Pinyon Script", serif;
-    font-size: 87px;
-    color: var(--alternate-color);
     position: relative;
-    bottom: 56px;
-    left: 47px;
-    width: fit-content;
+    bottom: 36px;
+    left: 153px;
+    width: 167px;
 }
 
 header .button {
@@ -342,6 +345,7 @@ header .button {
     margin: auto;
     letter-spacing: 1.2px;
     animation: visible-on 6s ease-in;
+    background-color: var(--alternate-color);
 }
 
 header .billet {
@@ -365,12 +369,12 @@ header .billet .image-block {
     transition: 500ms linear;
 }
 
-header .billet img {
+header .billet .image-block img {
     width: 60px;
     height: 60px;
     transition: 500ms linear;
-    position: absolute;
     border-radius: 100%;
+    opacity: 1;
 }
 
 header .billet h5 {
@@ -386,12 +390,19 @@ header .billet p {
     font-weight: 700;
 }
 
-header .billet:hover img {
-    width: 110%;
-    height: auto;
-    transform: translateX(-20px) translateY(-45%);
-    border-radius: 0;
+header .billet .bg {
+    width: auto;
+    height: 200px;
     position: absolute;
+    left: 0;
+    top: -65px;
+    z-index: 7;
+    opacity: 0;
+    transition-duration: 500ms;
+}
+
+header .billet:hover .bg {
+    opacity: 1;
 }
 
 @keyframes visible-on {
@@ -481,6 +492,12 @@ header .billet:hover img {
     align-items: center;
     font-weight: 400;
     letter-spacing: 2.8px;
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+.premium-villas .list p:not(:first-child) {
+    margin-top: 15px;
 }
 
 .premium-villas .list p::before {
@@ -534,6 +551,7 @@ header .billet:hover img {
     font-size: 18px;
     color: var(--alternate-color);
     font-weight: 400;
+    line-height: 140%;
 }
 
 .premium-villas .info {
@@ -541,11 +559,11 @@ header .billet:hover img {
 }
 
 .premium-villas .info .offer {
-    width: 720px;
+    width: 100%;
 }
 
 .premium-villas .info img {
-    width: 274px;
+    width: 222px;
 }
 
 .premium-villas .info h5,
@@ -698,6 +716,11 @@ header .billet:hover img {
     position: relative;
 }
 
+.infrastructure .slider .offer {
+    width: 92%;
+    margin: auto;
+}
+
 .infrastructure h2,
 .infrastructure h2 span {
     font-weight: 400;
@@ -709,6 +732,10 @@ header .billet:hover img {
 
 .infrastructure h2 span {
     color: var(--alternate-color);
+}
+
+.infrastructure .progress {
+    width: 95%;
 }
 
 .num {
@@ -733,7 +760,7 @@ header .billet:hover img {
 
 .slides {
     display: flex;
-    transition-duration: 500ms;
+    transition-duration: 800ms;
 }
 
 .slide {
@@ -880,13 +907,14 @@ footer .button {
     }
 
     header .title div:last-child {
-        font-size: 110px;
-        bottom: 70px;
-        left: 85px;
+        width: 200px;
+        bottom: 50px;
+        left: 215px;
     }
 
     header .button {
         margin: 0;
+        line-height: 90%;
     }
 
     .premium-villas .video {
@@ -911,6 +939,10 @@ footer .button {
 }
 
 @media (min-width: 768px) {
+    .modal .block {
+        width: 60%;
+    }
+
     .modal .block video {
         width: 80%;
         border-radius: 25px;
@@ -948,6 +980,10 @@ footer .button {
 
     .premium-villas .video video {
         height: 328px;
+    }
+
+    .premium-villas .info .offer {
+        width: 320px;
     }
 
     /* Круги */
@@ -990,11 +1026,12 @@ footer .button {
     }
 
     .slide .offer {
-        width: 37%;
+        width: 30%;
     }
 
     .slide .image img {
         width: 60vw;
+        height: 100%;
     }
 
     footer .container h2, footer .container h2 span {
@@ -1033,9 +1070,9 @@ footer .button {
     }
     
     header .title div:last-child {
-        font-size: 200px;
-        bottom: 105px;
-        left: 181px;
+        width: 400px;
+        bottom: 77px;
+        left: 360px;
     }
 
     header .button {
@@ -1056,6 +1093,10 @@ footer .button {
 
     .premium-villas .billet .bg {
         width: 55vw;
+    }
+
+    .premium-villas .info .offer {
+        width: 520px;
     }
 
     /* Круги */
@@ -1082,6 +1123,10 @@ footer .button {
         height: 53px;
     }
 
+    .infrastructure .progress {
+        width: 100%;
+    }
+
     footer .container h2, footer .container h2 span {
         font-size: 54px;
     }
@@ -1105,6 +1150,10 @@ footer .button {
         width: 1280px;
         height: 100%;
         background-color: #0004;
+    }
+
+    .modal .block {
+        width: 60%;
     }
 
     /* Второй блок */
@@ -1161,12 +1210,17 @@ footer .button {
     }
 
     .premium-villas .billet .bg {
-        width: 50vw;
+        width: 31vw;
         height: 84px;
     }
 
     .premium-villas .location p {
         font-size: 18px;
+    }
+
+    
+    .premium-villas .info .offer {
+        width: 720px;
     }
 
     
@@ -1204,7 +1258,7 @@ footer .button {
     }
 
     .achievements h2, .achievements h2 span {
-        font-size: 52px;
+        font-size: 55px;
         letter-spacing: 0;
     }
 
@@ -1238,7 +1292,6 @@ footer .button {
         padding-bottom: 20px;
     }
 
-
     .infrastructure h2, .infrastructure h2 span {
         font-size: 52px;
     }
@@ -1248,9 +1301,10 @@ footer .button {
     }
 
     .slide p {
-        font-size: 18px;
+        font-size: 17px;
         text-transform: uppercase;
     }
+
 
     .arrow {
         width: 40px;
@@ -1288,5 +1342,13 @@ footer .button {
 
     .circles > div {
         left: -30px;
+    }
+
+    .achievements .catalog {
+        bottom: 100px;
+    }
+
+    .achievements h2, .achievements h2 span {
+        font-size: 60px;
     }
 }
