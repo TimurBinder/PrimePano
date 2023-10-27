@@ -1128,6 +1128,11 @@ footer .button {
         width: 100%;
     }
 
+    .infrastructure .slider .offer {
+        width: 30%;
+        margin: 0;
+    }
+
     footer .container h2, footer .container h2 span {
         font-size: 54px;
     }
