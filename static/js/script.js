@@ -64,7 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 modal.style.zIndex = 7;
                 if (modal.classList.contains('video')) {
                     let video = modal.querySelector('video');
-                    video.src = video.getAttribute('data-src');
+                    if (video.hasAttribute('data-src'))
+                        video.src = video.getAttribute('data-src');
                     video.removeAttribute('data-src');
                     video.play();
                 }
