@@ -718,6 +718,7 @@ header .billet:hover .bg {
 
 .infrastructure .slider .offer {
     width: 92%;
+    height: 100%;
     margin: auto;
 }
 
