@@ -137,16 +137,19 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesBlock.style.width = slideWidth * slides.length + 'px';
 
         function switchNextSlide() {
-            if (currentIndex < slides.length - 1)
             currentIndex++;
+
+            if (currentIndex > slides.length - 1)
+                currentIndex = 0;
         
             slidesBlock.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
             current.innerHTML = currentIndex + 1;
         }
 
         function switchPrevSlide() {
-            if (currentIndex > 0)
             currentIndex--;
+            if (currentIndex < 0)
+                currentIndex = slides.length - 1;
         
             slidesBlock.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
             current.innerHTML = currentIndex + 1;
