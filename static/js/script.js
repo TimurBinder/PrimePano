@@ -158,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         let currentIndex = 0;
         let slideWidth = parseInt(window.getComputedStyle(slides[0]).width) + parseInt(window.getComputedStyle(slides[0]).marginRight.split('px')[0]) + parseInt(window.getComputedStyle(slides[0]).marginLeft.split('px')[0]) + 1;
-        console.log(slideWidth);
         current.innerHTML = currentIndex + 1;
         total.innerHTML = slides.length;
         
@@ -309,7 +308,6 @@ document.addEventListener('DOMContentLoaded', () => {
       
         function taskUpdate() {
           if (normOffset() > 0) {
-            console.log(el);
             window.removeEventListener('resize', onUpdate);
             window.removeEventListener('scroll', onUpdate);
             callback();
@@ -347,7 +345,6 @@ document.addEventListener('DOMContentLoaded', () => {
         else 
             selector = '.container';
 
-        console.log(selector);
         onScrolledTo(section.querySelector(selector), function() {
             setTimeout(() => {
                 section.querySelector('.video').style.opacity = 1;
