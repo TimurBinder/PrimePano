@@ -34,9 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (window.innerWidth >= 992)
             video.src = video.querySelector('source:first-child').src;
-        else if (window.innerWidth >= 576)
-            video.src = video.querySelector('source:nth-child(2)').src;
-        else 
+        else
             video.src = video.querySelector('source:last-child').src;
     } catch(e) {
         console.error(e);
