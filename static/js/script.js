@@ -1,3 +1,14 @@
+try {
+    [].forEach.call(document.querySelectorAll('img[data-src]'),    function(img) {
+        img.setAttribute('src', img.getAttribute('data-src'));
+        img.onload = function() {
+          img.removeAttribute('data-src');
+        };
+      });
+} catch(e) {
+    console.error(e);
+}
+
 // Зум
 try {
     document.addEventListener('DOMContentLoaded', () => {
@@ -33,20 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const video = document.querySelector('header .bg video');
 
         if (window.innerWidth >= 992)
-            video.src = video.querySelector('source:first-child').src;
+            video.src = video.querySelector('source:first-child').getAttribute('data-src');
         else
-            video.src = video.querySelector('source:last-child').src;
-    } catch(e) {
-        console.error(e);
-    }
+            video.src = video.querySelector('source:last-child').getAttribute('data-src');
 
-    try {
-        const video = document.querySelector('.premium-villas video');
-
+        const primeVideo = document.querySelector('.premium-villas video');
+    
         if (window.innerWidth >= 992)
-            video.src = video.querySelector('source:first-child').src;
+        primeVideo.src = video.querySelector('source:first-child').getAttribute('data-src');
         else 
-            video.src = video.querySelector('source:last-child').src;
+        primeVideo.src = video.querySelector('source:last-child').getAttribute('data-src');
     } catch(e) {
         console.error(e);
     }
