@@ -50,14 +50,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const primeVideo = document.querySelector('.premium-villas video');
     
-        if (window.innerWidth >= 992)
-        primeVideo.src = primeVideo.querySelector('source:first-child').getAttribute('data-src');
-        else 
-        primeVideo.src = primeVideo.querySelector('source:last-child').getAttribute('data-src');
     } catch(e) {
         console.error(e);
     }
-
+    try {
+        if (window.innerWidth >= 992)
+            primeVideo.src = primeVideo.querySelector('source:first-child').getAttribute('data-src');
+        else 
+            primeVideo.src = primeVideo.querySelector('source:last-child').getAttribute('data-src');
+    } catch(e) {
+        console.error(e);
+    }
+    
     // Модальное окно
     try {
         const modals = document.querySelectorAll('.modal');
