@@ -51,9 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const primeVideo = document.querySelector('.premium-villas video');
     
         if (window.innerWidth >= 992)
-        primeVideo.src = video.querySelector('source:first-child').getAttribute('data-src');
+        primeVideo.src = primeVideo.querySelector('source:first-child').getAttribute('data-src');
         else 
-        primeVideo.src = video.querySelector('source:last-child').getAttribute('data-src');
+        primeVideo.src = primeVideo.querySelector('source:last-child').getAttribute('data-src');
     } catch(e) {
         console.error(e);
     }
@@ -375,15 +375,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Информационный блок
     try {
         const section = document.querySelector('.premium-villas .info');
+        selector = '.offer';
 
-        onScrolledTo(document.querySelector('.achievements'), function() {
+        onScrolledTo(document.querySelector(selector), function() {
             setTimeout(() => {
                 section.querySelector('img').style.opacity = 1;
-            }, 100);
+            }, 0);
 
             setTimeout(() => {
                 section.querySelector('.offer').style.opacity = 1;
-            }, 600);
+            }, 400);
 
             setTimeout(() => {
                 section.querySelector('.price').style.opacity = 1;
