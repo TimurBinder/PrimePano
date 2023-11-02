@@ -47,13 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
             video.src = video.querySelector('source:first-child').getAttribute('data-src');
         else
             video.src = video.querySelector('source:last-child').getAttribute('data-src');
-
-        const primeVideo = document.querySelector('.premium-villas video');
     
     } catch(e) {
         console.error(e);
     }
     try {
+        const primeVideo = document.querySelector('.premium-villas video');
+
         if (window.innerWidth >= 992)
             primeVideo.src = primeVideo.querySelector('source:first-child').getAttribute('data-src');
         else 
