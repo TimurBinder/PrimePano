@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
         onScrolledTo(section, function() {
             setTimeout(() => {
                 section.querySelector('.title').classList.add('vis');
-            }, 2000);
+            }, 500);
         });
     } catch(e) {
         console.error(e)
@@ -317,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth > 992)
             selector = ".info";
         else 
-            selector = '.location';
+            selector = '.container';
 
         console.log(selector);
         onScrolledTo(section.querySelector(selector), function() {
@@ -390,7 +390,12 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
         const section = document.querySelector('.plan');
 
-        onScrolledTo(section.querySelector('.link'), function() {
+        if (window.innerWidth > 992)
+            selector = ".link";
+        else 
+            selector = '.head';
+
+        onScrolledTo(section.querySelector(selector), function() {
             setTimeout(() => {
                 section.style.opacity = 1;
             }, 200);

@@ -316,7 +316,7 @@ header .title div:first-child {
 }
 
 header .title.vis div:first-child {
-    animation: visible-on 3s ease-in;
+    animation: visible-on 2s ease-in;
     opacity: 1;
 }
 
@@ -427,6 +427,12 @@ header .billet:hover .bg {
     border-radius: 100%;
     overflow: hidden;
     position: relative;
+}
+
+.premium-villas .video video {
+    height: 100%;
+    position: relative;
+    left: -40%;
 }
 
 .premium-villas .video .play {
