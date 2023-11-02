@@ -29,7 +29,30 @@ try {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+    try {
+        const video = document.querySelector('header .bg video');
+
+        if (window.innerWidth >= 992)
+            video.src = video.querySelector('source:first-child').src;
+        else if (window.innerWidth >= 576)
+            video.src = video.querySelector('source:nth-child(2)').src;
+        else 
+            video.src = video.querySelector('source:last-child').src;
+    } catch(e) {
+        console.error(e);
+    }
+
+    try {
+        const video = document.querySelector('.premium-villas video');
+
+        if (window.innerWidth >= 992)
+            video.src = video.querySelector('source:first-child').src;
+        else 
+            video.src = video.querySelector('source:last-child').src;
+    } catch(e) {
+        console.error(e);
+    }
+
     // Модальное окно
     try {
         const modals = document.querySelectorAll('.modal');
